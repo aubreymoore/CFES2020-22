@@ -52,13 +52,23 @@
 \usepackage{csquotes}
 
 % Use style=draft to print citation keys
-%\usepackage[defernumbers=true,backend=biber,style=draft]{biblatex}
-%\usepackage[defernumbers=true, backend=biber, sorting=none]{biblatex}
-\usepackage[backend=biber]{biblatex}
+\usepackage{biblatex}
 
-\addbibresource{MooreAfter2017.bib}
-\addbibresource{inat.bib}
-\addbibresource{misc.bib}
+% This code adds a category "cited" to cited bibliographic items
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+
+% IMPORTANT NOTE: Zotero does not provide automatic sync for saved searches. This must be done manually.
+
+\addbibresource{MooreAfter2019.bib}    % From the My Library in my Zotero
+\addbibresource{MooreCRBAfter2019.bib} % From the CRB Library in my Zotero
+\addbibresource{inat.bib}              % From ?
+\addbibresource{misc.bib}              % manually editted
+\addbibresource{InPreparation.bib}     % saved search for "In preparation" in Extras
+
+% Add all build a bibliography containing all references, cited plus uncited
+\nocite{*}
+
 \usepackage[breaklinks=true, colorlinks=True, allcolors=blue]{hyperref}
 
 \usepackage{indentfirst} 
@@ -83,10 +93,6 @@ Professor / Extension Entomologist}
 
 \maketitle
 
-This document can be downloaded as a PDF file from: 
-
-\url{https://github.com/aubreymoore/CFES2019/blob/master/CFES2019.pdf}
-
 \includepdf[pages=1]{Reflective-form}
 
 \setcounter{tocdepth}{2}
@@ -102,7 +108,7 @@ split appointment (50\% extension and 50\% research). On June 26,
 (100\% extension) with the academic rank of assistant professor. At
 the end of the 2012 fall term I applied for tenure and promotion to associate professor and
 received both in 2013. At the end of 2018 fall term I applied for promotion to
-full professor and was promoted on July 11, 2019~\cite{recommendation_for_promotion2019}. 
+full professor and was promoted on July 11, 2019. 
 
 I work within the Agriculture and Natural Resources Unit of the University
 of Guam Cooperative Extension Service. I am a faculty member of the
@@ -120,10 +126,10 @@ My current faculty role allocation is as follows:
 
 \textbf{Note to Reader:}
 
-This report is available as an electronic document in PDF format at\\
-\url{https://github.com/aubreymoore/CFES2019/blob/master/CFES2019.pdf}. 
+This most recent version of this report is available as a PDF format which can be downloaded from \\
+\url{https://github.com/aubreymoore/CFES2020-22/raw/main/CFES2020-22.pdf}. 
 
-If you are reading the PDF version of the report on a device connected
+If you are reading the PDF version of this report on a device connected
 to the internet, you will be able to follow hypertext links to documents
 I have referenced.
 
@@ -148,13 +154,14 @@ samples and define the problem.
 
 The number of extension calls requiring my assistance averaged approximately
 three per day during the reporting period. Many of these are documented
-as postings to iNaturalist \cite{moore_aubrey_2020}.
+as postings to iNaturalist \cite{moore_inat_since_2020-06-15}.
 
 \subsubsection{Plans}
 
 I plan to continue providing insect diagnostic services.
 
 \subsubsection{References}
+
 \printbibliography[heading=none]
 \end{refsection}
 
@@ -802,10 +809,13 @@ I intend to write a grant to the Department of Interior Office of Insular Affair
 \section{Journal Articles in Preparation (n=7)}
 \begin{refsection}
 	
-\nocite{moore_first_nodate-1,moore_mariana_2013,moore_three_nodate-1,moore_change_nodate,moore_aubrey_crb_nodate,marshall_recent_nodate,moore_coconut_nodate-1}
+\cite{moore_first_nodate-1,moore_mariana_2013,moore_three_nodate-1,moore_change_nodate,moore_aubrey_crb_nodate,marshall_recent_nodate,moore_coconut_nodate-1}
 
 \printbibliography[heading=none]
 \end{refsection}
 
+\section{Uncited References}
+This section should be commented out when the report is completed.
+\printbibliography[heading=none, notcategory=cited]
 
 \end{document}

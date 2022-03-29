@@ -46,6 +46,8 @@
 \usepackage{array}
 \usepackage{url}
 \usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{booktabs}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -53,7 +55,7 @@
 
 % Use style=draft to print citation keys
 % soting=none orders references in the order in which they occur in the document
-\usepackage[sorting=none]{biblatex}
+\usepackage[sorting=none, style=draft]{biblatex}
 
 % This code adds a category "cited" to cited bibliographic items
 \DeclareBibliographyCategory{cited}
@@ -225,7 +227,7 @@ No significant progress on curation and digitization of the collection has taken
 
 \subsubsection{Plans}
 
-In 2019 I submitted a proposal for support of the UOG Insect collection as part of the Biorepository Component of the EPSCOR grant \cite{mooreUniversityGuamInsect2019}. EPSCOR has recently offered up to \$10k in support of the collection. I intend to use this money to temporarily solve the space limitation issue by installing a door to allow access to bench space in the adjoining ANR lab. We already have a quote for this work.
+In 2019 I submitted a proposal for support of the UOG Insect collection as part of the Biorepository Component of the EPSCOR grant \cite{moore_university_2019}. EPSCOR has recently offered up to \$10k in support of the collection. I intend to use this money to temporarily solve the space limitation issue by installing a door to allow access to bench space in the adjoining ANR lab. We already have a quote for this work.
 
 When the space problem has been solved, I intend to re-established the UOG insect collection internship to train entomology students how to curate an institutional insect collection.
 
@@ -248,13 +250,7 @@ I serve as the UOG Coordinator for the National Plant Diagnostic Network.
 
 Participated in monthly conference calls.
 
-Prepared an annual work plan and budget \cite{moore_university_2018}.
-
-Prepared annual report \cite{moore_npdn_2018}.
-
-Served on the NPDN IT Strategic Planning Committee.
-
-Created a digital archive for the discontinuesd web site, Pacific Islands Distance Diagnostics and Recommendation System \cite{moore_piddrs_2019}.
+Prepared an annual work plan and budget \cite{moore_western_2021}.
 
 \subsubsection{Plans}
 
@@ -267,15 +263,11 @@ I will continue to act as UOG coordinator for WPDN.
 \subsection{Guam Invasive Species Advisory Committee (GISAC) and Guam Invasive Species Council (GISC)}
 \begin{refsection}
 	
-I am a founding member and regular participant in GISAC. President Underwood delegated me to represent UOG as a voting member of GISC.
+I am a founding member and regular participant in GISAC. President Underwood delegated me to represent UOG as a voting member of GISC and President Krise has reconfirmed my delegation.
 
 \subsubsection{Activities}
 
 I participated in GISAC and GISC meetings.
-
-During 2018, I served on a GISC Import Data Harmonization Committee.
-This committee generated recommendations \cite{guerrero_guam_2018}
-resulting in a bill to amend the Guam Invasive Species Act \cite{guerrero_bill_2018}.
 
 \subsubsection{Plans}
 
@@ -286,43 +278,6 @@ I plan to participate in a review of the Guam Invasive Species Management Plan.
 \subsubsection{References}
 \printbibliography[heading=none]
 \end{refsection}
-
-\subsection{Raspberry Pi Workshop}
-\begin{refsection}
-	
-\subsubsection{Description}
-
-I partnered with the University of Guam (UOG) 4H program to put on a workshop to introduce local youth to the Raspberry Pi computer and Python coding. 
-
-\subsubsection{Activities}
-
-This 20 hour workshop was conducted on July 23 through July 26, 2019, 900h to 1300h each day. An Open Science Frame work site was used as an online repository for course materials \cite{moore_open_2018} and detailed report was submitted \cite{moore_report_2019-1}.
-
-\subsubsection{Plans}
-
-This workshop may be offered again if there is a demand and time and resources permit.
-
-\subsubsection{References}
-\printbibliography[heading=none]
-\end{refsection}
-
-\subsection{Insect Activities for Guam Head Start Program}
-
-\subsubsection{Description}
-
-As part of visits to the UOG Agriculture and Life Sciences Building by the Guam Head Start Program, I provide a section on insects.
-
-\subsubsection{Acitivities}
-
-On the last Friday of each month during Spring Term 2019, I put on a miniprogram for four consecutive groups of young children. Activities included:
-\begin{itemize}
-	\item A short guided walk to observe insects and to collect some of them.
-	\item Observation of pinned insects from the \textit{Insect Road Show} display.
-	\item Observation of live insects under a microscope connected to a large monitor.
-	\item Hunting for coconut rhinoceros beetles in a simulated breeding site.
-	\item Distribution of give-aways including rhino beetle stickers and hand lenses.
-\end{itemize}
-	
 
 \subsection{Public Outreach: Radio and Newspaper}
 
@@ -342,7 +297,14 @@ Since the 1990s, I have built and maintained web sites to facilitate sharing inf
 	\printbibliography[heading=none, keyword=Moore-presentations-after-2017]
 \end{refsection} 
 
-\pagebreak
+\subsection{Public Outreach: Public GitHub Repositories}
+
+I attempt to provide access to as much of my work as possible using public GitHub repositories. GitHub is a free service for backing up and sharing documents on the web. Repositories which I have updated during the reporting period are listed in Table \ref{repolist}. Somewhere near the top of this list you will find a link to a repo called \textbf{CFES2020-22}. This repo contains the this document and all previous versions of the document.
+
+I also use GitHub pages for serving static websites. A couple of good example sites are one which I created for my \href{https://aubreymoore.github.io/ALBI-345/}{ALBI345 General Entomology} course and on which is a \href{https://aubreymoore.github.io/crop-pest-list/}{List of Insects and Mites Attacking Crops in Micronesia}.
+
+\include{repolist}
+
 \section{Creative/Scholarly Activities or Research}
 
 \subsection{Coconut Rhinoceros Beetle (CRB) Biocontrol}\label{sec:coconut-rhinoceros-beetle-(crb)-biocontrol}
@@ -806,5 +768,6 @@ I intend to write a grant to the Department of Interior Office of Insular Affair
 \section{Uncited References}
 This section should be commented out when the report is completed.
 \printbibliography[heading=none, notcategory=cited]
+
 
 \end{document}

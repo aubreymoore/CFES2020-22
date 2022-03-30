@@ -48,14 +48,16 @@
 \usepackage{pdfpages}
 \usepackage{longtable}
 \usepackage{booktabs}
-
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{pgfgantt}
 
 % Use style=draft to print citation keys
 % soting=none orders references in the order in which they occur in the document
-\usepackage[sorting=none, style=draft]{biblatex}
+% maxbibnames=99 prevents use of et al.
+\usepackage[sorting=none, style=draft, maxbibnames=99]{biblatex}
 
 % This code adds a category "cited" to cited bibliographic items
 \DeclareBibliographyCategory{cited}
@@ -104,6 +106,18 @@ Professor / Extension Entomologist}
 \clearpage
 
 \section{Preface}
+
+\begin{ganttchart}{1}{12}
+	\gantttitle{2011}{12} \\
+	\gantttitlelist{1,...,12}{1} \\
+	\ganttgroup{Group 1}{1}{7} \\
+	\ganttbar{Task 1}{1}{2} \\
+	\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+	\ganttmilestone{Milestone}{7} \ganttnewline
+	\ganttbar{Final Task}{8}{12}
+	\ganttlink{elem2}{elem3}
+	\ganttlink{elem3}{elem4}
+\end{ganttchart}
 	
 I was hired by the University of Guam on October 1, 2003 under a limited-term,
 split appointment (50\% extension and 50\% research). On June 26,
@@ -638,39 +652,77 @@ and Jesse Bamba.
 I chaired this committee, joined by Ross Miller and Hui Gong. This committee concluded with submission of our recommendation to the Dean during October 2018. 
 
 \newpage
-\section{Active Grants (n=8)}
-	
-%\subsection{USDA-APHIS-2018 Biological Control of Coconut Rhinoceros Beetle Biotype-G 1Y \$200K}
-%\label{USDA-APHIS-2018}
-%\begin{refsection}
-%
-%Work Plan \cite{moore_farm_2018-1}; 
-%Budget \cite{moore_fy18_2018}; 
-%Report 2 \cite{moore_usda_2019-1}
-%
-%	\printbibliography[heading=none]
-%\end{refsection}
+\section{Grants which were active during the reporting period (n=8)}
 
-\subsection{USDA-APHIS-2019 Biological Control of Coconut Rhinoceros Beetle Biotype-G 1Y \$200K}
+\begin{table}[h!]
+	\centering
+	\caption{List of grants active during the reporting period (2020-06-15 through 2022-06-15).}
+	\label{grantlist}
+	\begin{tabular}{lp{3in}>{\raggedleft\arraybackslash}l}
+		\toprule
+		code &                                                                                                    title &  funding \\
+		\midrule
+		OIA-CRB & Establishment of Self-sustaining Biological Control of Coconut Rhinoceros Beetle Biotype G in Micronesia & \$239,994 \\
+		\midrule
+		APHIS-CRB &                                        Biological Control of Coconut Rhinoceros Beetle Biotype G on Guam & \$200,000 \\
+		\midrule		
+		FS-CRB & Establishment of Self-sustaining Biological Control of Coconut Rhinoceros Beetle Biotype G in Micronesia &  \$98,240 \\
+		\midrule
+		BIODIVERSITY &                                                                       Guam Forest Biodiversity Inventory &  \$80,000 \\
+		\midrule		
+		WPDN1 &                                                                         Western Plant Diagnostic Network &  \$63,366 \\
+		\midrule
+		8SPOT &                                                                 Captive Breeding of Eight-spot Butterfly &  \$23,212 \\
+		\midrule
+		FS-CRB-HR &                         Improving Coconut Rhinoceros Beetle Breeding Site Detection Using Harmonic Radar &  \$23,000 \\
+		\midrule
+		WPDN2 &                                                                  Western Plant Diagnostic Network FY2022 &  \$15,000 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+\begin{ganttchart}[time slot format=isodate, expand chart=\textwidth]{2020-01-01}{2023-12-31}
+%	\gantttitle{2011}{12} \\
+	\gantttitlecalendar{year} \\
+	\ganttgroup{reporting period}{2020-06-15}{2022-06-15} \\
+	\ganttbar{APHIS}{2020-01-01}{2021-08-07} \\
+	\ganttbar{DOI-OIA}{2020-06-15}{2023-09-30} \\
+	\ganttbar{McStennis}{2020-05-14}{2022-09-30}\\
+	\ganttbar{8spot}{2020-01-01}{2022-09-30}\\
+	\ganttbar{WPDN1}{2020-01-01}{2021-07-31}\\
+	\ganttbar{WPDN2}{2021-09-01}{2022-08-31}\\
+	\ganttbar{FS-HR}{2020-06-17}{2022-12-31}\\
+	\ganttbar{FS-CRB}{2020-06-17}{2022-12-31}		
+	\ganttvrule{}{2020-06-15}
+	\ganttvrule{}{2022-06-15}
+\end{ganttchart}
+\caption{Performance periods for grants which were active during the reporting perion (2020-06-15 through 2022-06-15).}
+\end{figure}
+
+
+
+
+
+\clearpage
+\subsection{APHIS-CRB Biological Control of Coconut Rhinoceros Beetle Biotype-G \$200K}
 \label{USDA-APHIS-2019}
 
 \subsubsection{Key data}
-
 \begin{itemize}
 	\setlength\itemsep{0em}
-	\item \textbf{Short title:} 2019 PPA
+	\item \textbf{Code:} APHIS-CRB
 	\item \textbf{Long title:} Biological Control of Coconut Rhinoceros Beetle Biotype G on Guam	
 	\item \textbf{Start date:} 2019-08-08	
-	\item \textbf{End date:} 2021-08-07	
+	\item \textbf{End date:} \textcolor{red}{2021-08-07}	
 	\item \textbf{Total budget:} \$200,000	
 	\item \textbf{Federal ID:} AP19PPQS\&T00C168
 	\item \textbf{UOG ID:} USDA Biocontrol 2019
 	\item \textbf{UOG Account:} 30-2F-311117
-	\item \textbf{GitHub repository:} \url{https://github.com/aubreymoore/FY19-PPA-Report-1}
+	\item \href{https://github.com/aubreymoore/FY19-PPA-Report-1}{GitHub repository}
 \end{itemize}
 
 \subsubsection{Documents}
-
 \begin{itemize}
 	\setlength\itemsep{0em}	
 	\item \href{https://github.com/aubreymoore/Miscellaneous-Docs-for-CFES2018/raw/master/MooreFB19.pdf}{Proposal}		
@@ -682,43 +734,223 @@ I chaired this committee, joined by Ross Miller and Hui Gong. This committee con
 	\item \href{}{Final Report}
 \end{itemize}
 
-\subsection{DOI-OIA Biological Control of Coconut Rhinoceros Beetle Biotype-G in Micronesia 2Y \$177K}
+
+
+
+\clearpage
+\subsection{OIA-CRB Biological Control of Coconut Rhinoceros Beetle Biotype-G in Micronesia \$177K}
 \label{DOI}
-\begin{refsection}
-Report 2 \cite{moore_doi-oia_2018};
-Report 3 \cite{moore_doi-oia_2019}		
-	\printbibliography[heading=none]
-\end{refsection}
 
-\subsection{McIntire-Stennis Guam Forest Insect Survey 4Y \$60K}
-\label{McIntire-Stennis Guam Forest Insect Survey}
-\begin{refsection}
-Final report \cite{moore_aubreymoore/mcintire-stennis_2018}
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \textbf{Code:} OIA-CRB
+	\item \textbf{Title:} Establishment of Self-sustaining Biological Control of Coconut Rhinoceros Beetle Biotype G in Micronesia
+	\item \textbf{Start date:} 2020-05-14
+	\item \textbf{End date:} 2023-09-30
+	\item \textbf{Total budget:} \$239,994
+	\item \textbf{Federal ID:} D20AP00060
+	\item \textbf{UOG ID:} DOI Biocontrol CRB
+	\item \textbf{UOG Account:} 30-2F-311150
+	\item \href{https://github.com/aubreymoore/2020-DOI-CRB-Biocontrol}{GitHub repository}
+\end{itemize}
 
-	\printbibliography[heading=none]
-\end{refsection}
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/2020-DOI-CRB-Biocontrol/blob/master/doi_proposal.pdf}{Proposal}
+	\item \href{https://github.com/aubreymoore/2020-DOI-CRB-Biocontrol/blob/master/D20AP00060-Grant\%20Award\%20Document.pdf}{Award letter}
+	\item \href{https://github.com/aubreymoore/2020-DOI-CRB-Biocontrol/raw/master/Reporting\%20requirements\%20\%20D17AP00107.pdf}{Reporting requirements}
+	\item \href{https://github.com/aubreymoore/2020-DOI-CRB-Biocontrol/raw/master/doi_report1.pdf}{Report 1}
+\end{itemize}
 
-\subsection{McIntire-Stennis Guam Forest Biodiversity Inventory 5Y \$80K}
-\label{McIntire-Stennis Guam Forest Biodiversity Inventory}
-\begin{refsection}
-Proposal \cite{moore_mcintire-stennis_2018};
-Progress report \cite{moore_guam_2020}
-	\printbibliography[heading=none]
-\end{refsection}
+\newpage
+\subsection{BIODIVERSITY Guam Forest Biodiversity Inventory \$80K}
 
-\subsection{GDOA-DAWR Eight Spot Butterfly Conservation \$20K}
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item \textbf{Code:} BIODIVERSITY
+	\item \textbf{Title:} Guam Forest Biodiversity Inventory
+	\item \textbf{Funding source:} McIntire-Stennis (administered by CNAS)
+	\item \textbf{Reporting system:} \href{https://portal.nifa.usda.gov/portal/front/login}{REEport}
+	\item \textbf{Start date:} 2018-10-15
+	\item \textbf{End date:} 2022-09-30
+	\item \textbf{Total budget:} \$16,000 per year for each of 4 years
+	\item \textbf{Federal ID:} GUA0930
+	\item \textbf{UOG ID:}
+	\item \textbf{UOG Account:}
+	\item \href{https://github.com/aubreymoore/McIntire-Stennis}{GitHub repository}
+\end{itemize}
+
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/McIntire-Stennis/raw/master/MS_Project_Proposal_2018/ms_proposal_2018.pdf}{2018-06-21 Proposal}
+	\item \href{https://github.com/aubreymoore/McIntire-Stennis/raw/master/project_initiation.pdf}{2018-10-08 Project initiation}
+	\item \href{https://github.com/aubreymoore/McIntire-Stennis/raw/master/2019-report.pdf}{2020-01-02 2019 Annual report}
+	\item \href{https://github.com/aubreymoore/McIntire-Stennis/raw/master/2020\%20Annual\%20Report/2020\%20McS\%20Annual\%20Report.pdf}{2020-12-28 2020 Annual report}
+	\item \href{}{Annual report due 2021-12-31}
+	\item \href{}{Final report due 2022-12-31}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection{8SPOT Eight Spot Butterfly Conservation \$20K}
 \label{eightspot}
-\begin{refsection}
-Proposal and Permit Application \cite{aubrey_moore_application_2016}
-\printbibliography[heading=none]
-\end{refsection}
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item \textbf{Code:} 8SPOT
+	\item \textbf{Title:} Captive Breeding of Eight-spot Butterfly
+	\item \textbf{Start date:} 2013-10-01
+	\item \textbf{End date:} 2022-09-30
+	\item \textbf{Total budget:} \$23,212
+	\item \textbf{Funding Agency:} DOI-FWS (via GDOA-DAWR)
+	\item \textbf{Federal ID (FAIN):} F13AF01300
+	\item \textbf{UOG ID:}
+	\item \textbf{UOG Account:} 30-1F-315058-R
+	\item \href{https://github.com/aubreymoore/Hypolimnas-octocula-conservation}{GitHub repository}
+\end{itemize}
 
-\subsection{Western Plant Diagnostic Network 1Y \$10K}
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/Hypollimnas-octocula-conservation/blob/master/8spot-award-notice.pdf}{Award letter (includes scope of work and budget)}
+	\item \href{https://github.com/aubreymoore/Hypollimnas-octocula-conservation/blob/master/8spot-award-notice-updated.pdf}{Updated Award Letter}
+	\item \href{}{Report 1; performance period; due on}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection{WPDN1 Western Plant Diagnostic Network 2016 \$63K}
 \label{WPDN}
-\begin{refsection}
-Progress report \cite{moore_npdn_2018}
-\printbibliography[heading=none]
-\end{refsection}
+
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \textbf{Code:} WPDN1
+	\item \textbf{Long title:} Western Plant Diagnostic Network
+	\item \textbf{Start date:} 2016-09-01
+	\item \textbf{End date:} \textcolor{red}{2021-07-31}
+	\item \textbf{Total budget:} \$63,366
+	\item \textbf{Federal ID(FAIN):} 20163762025851
+	\item \textbf{UOG ID:}
+	\item \textbf{UOG Account:} 2F-243432R5
+	\item \href{https://github.com/aubreymoore/WPDN}{GitHub repository}
+\end{itemize}
+
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/WPDN/raw/main/WPDN\%20-award-2020.pdf}{Proposal and Award Letter}
+	\item \href{}{Report 1; performance period; due on YYYY-MM-DD}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection{WPDN2 Western Plant Diagnostic Network FY2022 \$15K}
+\label{WPDN}
+
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \textbf{Code:} WPDN2
+	\item \textbf{Title:} Western Plant Diagnostic Network FY2022
+	\item \textbf{Start date:} 2021-09-01
+	\item \textbf{End date:} 2022-08-31
+	\item \textbf{Total budget:} \$15,000
+	\item \textbf{UOG ID:} WPTRC-UCDAVIS/USDA WPLANTDI
+	\item \textbf{UOG Account:} 61-1F-243432
+	\item \href{https://github.com/aubreymoore/WPDN}{GitHub repository}
+\end{itemize}
+
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/WPDN/blob/main/WPDN\%202021-2022\%20workplan\%20and\%20budget.pdf}{Work plan and budget}
+	\item \href{https://github.com/aubreymoore/WPDN/raw/main/FY2022/WPDN-FY2022-Award-Letter.pdf}{Award letter}
+	\item \href{https://github.com/aubreymoore/WPDN/raw/main/FY2022/UOG-account-setup.pdf}{UOG account setup}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection{FS-CRB-HR Harmonic Radar \$23K}
+\label{2020FS-CRB}
+
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item \textbf{Code:} FS-CRB-HR
+	\item \textbf{Long title:} Improving Coconut Rhinoceros Beetle Breeding Site Detection Using Harmonic Radar
+	\item \textbf{Start date:} 2020-06-17
+	\item \textbf{End date:} 2022-12-31
+	\item \textbf{Total budget:} \$23,000
+	\item \textbf{Federal ID:} 20-DG-11052021-227
+	\item \textbf{UOG ID:} CNAS-USDA-CRB Harmonic Radar
+	\item \textbf{UG Account:} 30-2F-311144-R
+	\item \href{https://github.com/aubreymoore/Harmonic-Radar}{GitHub repository}
+\end{itemize}
+
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}		
+	\item \href{https://github.com/aubreymoore/Harmonic-Radar/blob/master/USFS-harmonic-radar-proposal.pdf}{Proposal}
+	\item \href{https://github.com/aubreymoore/grant-tracker/blob/main/mydocs/20-DG-227-UOG-CRB-Harmonic-Radar-Fully-Signed-Grant.pdf}{Award letter}
+	\item \href{https://github.com/aubreymoore/grant-tracker/blob/main/mydocs/20-DG-227\%20UOG\%20Mod\%201\%20Fully\%20Signed.pdf}{Extension until 2022-12-31}
+	\item \href{https://github.com/aubreymoore/Harmonic-Radar/raw/master/FS-CRB-HR-report1.pdf}{Report 1 (2021-01-31)}
+	\item \href{}{Report 2 (2021-07-31)}
+	\item \href{}{Final report (90 days after expiration date)}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection{Forest Service CRB \$98K}
+\label{2020FS-CRB}
+
+\subsubsection{Key data}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \textbf{Code:} FS-CRB
+	\item \textbf{Long title:} Establishment of Self-sustaining Biological Control of Coconut Rhinoceros Beetle Biotype G in Micronesia
+	\item \textbf{Start date:} 2020-06-17
+	\item \textbf{End date:} 2022-12-31
+	\item \textbf{Total budget:} \$98,240
+	\item \textbf{Federal ID:} 20-DG-11052021-229
+	\item \textbf{UOG ID:} CNAS-USDA Control of CRB
+	\item \textbf{UG Account:} 30-2F-311143-R
+	\item \href{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project}{GitHub repository}
+\end{itemize}
+
+\subsubsection{Documents}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item \href{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project/blob/master/combined-proposal.pdf}{Proposal}
+	\item \href{https://github.com/aubreymoore/grant-tracker/blob/main/mydocs/20-DG-229\%20UOG\%20LFA\%20CRB\%20Fully\%20Signed\%20Grant.pdf}{Award letter}
+	\item \href{https://github.com/aubreymoore/grant-tracker/blob/main/mydocs/20-DG-229\%20UOG\%20Mod\%201\%20Fully\%20Signed.pdf}{Extension until 2022-12-31}
+	\item \href{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project/raw/master/FS-CRB-biocontrol-report1.pdf}{Report 1 (2021-01-31)}
+	\item \href{}{Report 2 (2021-07-31)}
+	\item \href{}{Final report}
+	\item \href{https://github.com/aubreymoore/2020-FS-CRB-biocontrol-project/blob/master/20-DG-229-UOG-Mod-2-Fully-Signed.pdf}{2021-06-15 Amended agreement}
+\end{itemize}
+
+
+
 
 
 \newpage

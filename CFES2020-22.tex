@@ -53,6 +53,7 @@
 \usepackage{csquotes}
 \usepackage{xcolor}
 \usepackage{pgfgantt}
+\usepackage{todonotes}
 
 % Use style=draft to print citation keys
 % soting=none orders references in the order in which they occur in the document
@@ -105,19 +106,9 @@ Professor / Extension Entomologist}
 
 \clearpage
 
-\section{Preface}
+\todo[inline]{add Guam beekeeper presentation}
 
-\begin{ganttchart}{1}{12}
-	\gantttitle{2011}{12} \\
-	\gantttitlelist{1,...,12}{1} \\
-	\ganttgroup{Group 1}{1}{7} \\
-	\ganttbar{Task 1}{1}{2} \\
-	\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-	\ganttmilestone{Milestone}{7} \ganttnewline
-	\ganttbar{Final Task}{8}{12}
-	\ganttlink{elem2}{elem3}
-	\ganttlink{elem3}{elem4}
-\end{ganttchart}
+\section{Preface}
 	
 I was hired by the University of Guam on October 1, 2003 under a limited-term,
 split appointment (50\% extension and 50\% research). On June 26,
@@ -249,9 +240,26 @@ When the space problem has been solved, I intend to re-established the UOG insec
 \printbibliography[heading=none]
 \end{refsection}
 
-\subsection{Guam Coconut Rhinoceros Beetle Project}
+\subsection{Mitigation of Damage to Guam's Ecosystems by Invasive Species}
 
-This is my largest and most important project. Please see CRB activities in the Creative/Research/Scholarly section \ref{sec:coconut-rhinoceros-beetle-(crb)-biocontrol}.
+Guam's ecosystems are rapidly being degraded by invasive species. These include:
+\begin{itemize}
+	\item \textbf{Brown treesnake} which has extirpated Guam's forest birds, causing the loss of ecosystem services they provided, such as seed dispersal, insect control and pollination.
+	\item \textbf{Cycad aulacaspis scale insect}, ACS, which has killed more than 90\% of Guam's endemic cycads, known locally as \textit{fadang}. Fadang went from being the most abundant plant in Guam's forests in 2002 to being listed as an endangered species in 2015.
+	\item \textbf{Coconut rhinoceros beetle}, CRB, which is killing coconut palms and palma brava throughout the island. These two palm species where the second and third most abundant trees in Guam's forest in 2002. 
+\end{itemize}
+
+Clearly, an ecological disaster is happening on Guam, especially in forest ecosystems. As an extension entomologist, I am tasked with providing solutions to problems caused by insect pests. Unfortunately, there are no known methods for effectively controlling CAS and CRB on Guam. Therefor, I spend much of my time and effort performing applied research in an attempt to adequately control CAS and CRB so that restoration of Guam's forests can be attempted. 
+
+\subsubsection{Activities}
+
+Applied research is reported  in the Creative/Research/Scholarly: section \ref{sec:coconut-rhinoceros-beetle-(crb)-biocontrol} for CRB and section \ref{CASbiocontrol} for CAS.
+
+\subsubsection{Plans}
+
+I plan to continue providing control recommendations for invasive insect species when control methods are available.
+
+I will continue with applied research on CAS and CRB in an effort to mitigate the major damage being done by these pests.
 
 \subsection{National Plant Diagnostic Network (NPDN)}
 \begin{refsection}
@@ -274,8 +282,9 @@ I will continue to act as UOG coordinator for WPDN.
 \printbibliography[heading=none]
 \end{refsection}	
 
+
+
 \subsection{Guam Invasive Species Advisory Committee (GISAC) and Guam Invasive Species Council (GISC)}
-\begin{refsection}
 	
 I am a founding member and regular participant in GISAC. President Underwood delegated me to represent UOG as a voting member of GISC and President Krise has reconfirmed my delegation.
 
@@ -289,9 +298,7 @@ I plan to continue as an active member of GISAC and GISC.
 
 I plan to participate in a review of the Guam Invasive Species Management Plan.
 
-\subsubsection{References}
-\printbibliography[heading=none]
-\end{refsection}
+
 
 \subsection{Public Outreach: Radio and Newspaper}
 
@@ -307,7 +314,16 @@ Since the 1990s, I have built and maintained web sites to facilitate sharing inf
 
 \subsection{Public Outreach: Presentations}
 \begin{refsection}
-\cite{moore_biological_2021, moore_how_2021}
+\cite{moore_biological_2021, moore_how_2021,moore_presentation_2021}
+\cite{grasela_preliminary_2022}
+\cite{moore_invasive_2022}
+\subsubsection{References}
+\printbibliography[heading=none]
+\end{refsection}
+
+\subsection{Public Outreach: Miscelleaneous}
+\begin{refsection}
+\cite{moore_what_2022}
 \subsubsection{References}
 \printbibliography[heading=none]
 \end{refsection}
@@ -321,6 +337,19 @@ I also use GitHub pages for serving static websites. A couple of good example si
 \include{repolist}
 
 \section{Creative/Scholarly Activities or Research}
+
+\subsection{Peer Reviewed Publications}
+
+\begin{refsection}
+	\cite{siderhurst_effects_2021, barrera_electron_2021, marshall_production_2021}
+	\cite{cave_biological_2022}
+	\cite{moore_detecting_2022}
+	\printbibliography[heading=none]
+\end{refsection}
+
+
+
+
 
 \subsection{Coconut Rhinoceros Beetle (CRB) Biocontrol}\label{sec:coconut-rhinoceros-beetle-(crb)-biocontrol}
 \begin{refsection}
@@ -504,6 +533,7 @@ and Dr. Ross Miller, who are independently investigating the mechanism of virus 
 
 
 \subsection{Cycad Aulacaspis Scale (CAS) Biocontrol}
+\label{CASbiocontrol}
 \begin{refsection}
 
 \subsubsection{Description}
@@ -653,6 +683,8 @@ I chaired this committee, joined by Ross Miller and Hui Gong. This committee con
 
 \newpage
 \section{Grants which were active during the reporting period (n=8)}
+
+Five grants to be completed before the end of 2022.
 
 \begin{table}[h!]
 	\centering
